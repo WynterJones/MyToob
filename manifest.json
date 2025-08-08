@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "MyToob",
+  "version": "1.0",
+  "description": "Automatically blocks YouTube sponsored ads, modifies the UI to be more user-friendly for me.",
+  "permissions": ["scripting", "storage", "unlimitedStorage"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "MyToob",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": [
+        "content.js",
+        "hover_lockup_metadata_popup.js",
+        "watched_filter.js",
+        "watch_css_toggle.js"
+      ],
+      "css": [
+        "hide_selectors.css",
+        "rich_item_width.css",
+        "hide_rich_items_with_overlay.css",
+        "hover_lockup_metadata_popup.css"
+      ]
+    },
+    {
+      "matches": ["*://www.youtube.com/watch*"],
+      "js": ["force_theater_mode.js", "force_highest_quality.js"],
+      "css": []
+    }
+  ]
+}

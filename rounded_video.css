@@ -1,0 +1,8 @@
+#movie_player,
+ytd-watch-flexy #primary ytd-player,
+ytd-player,
+.html5-video-player,
+.html5-video-container video {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}

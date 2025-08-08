@@ -1,0 +1,20 @@
+ytd-two-column-browse-results-renderer #header {
+  display: none !important;
+}
+#content > ytd-mini-guide-renderer {
+  display: none !important;
+}
+#guide-button {
+  display: none !important;
+}
+#content > yt-lockup-view-model > div > div > yt-lockup-metadata-view-model {
+  display: none !important;
+}
+
+ytd-reel-shelf-renderer,
+ytd-ad-slot-renderer,
+.ytd-live-chat-frame,
+#voice-search-button,
+.ytp-paid-content-overlay {
+  display: none !important;
+}

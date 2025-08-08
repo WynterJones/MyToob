@@ -1,0 +1,4 @@
+#contents
+  > ytd-rich-item-renderer:has(.ytThumbnailBottomOverlayViewModelHost div) {
+  display: none !important;
+}

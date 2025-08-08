@@ -1,0 +1,20 @@
+#contents > ytd-rich-item-renderer {
+  width: 15% !important;
+  max-width: 15% !important;
+  flex: 0 0 15% !important;
+}
+
+#frosted-glass.with-chipbar.ytd-app {
+  height: 70px !important;
+}
+
+ytd-watch-flexy[full-bleed-player] #full-bleed-container.ytd-watch-flexy {
+  height: 100vh !important;
+  max-height: 100vh !important;
+  position: fixed !important;
+  top: 0 !important;
+}
+
+#background.ytd-masthead {
+  background: none !important;
+}
