@@ -9,10 +9,11 @@
 }
 
 ytd-watch-flexy[full-bleed-player] #full-bleed-container.ytd-watch-flexy {
-  height: 100vh !important;
-  max-height: 100vh !important;
+  height: calc(100vh - 20px) !important;
+  max-height: calc(100vh - 20px) !important;
   position: fixed !important;
   top: 0 !important;
+  padding-top: 10px !important;
 }
 
 #background.ytd-masthead {

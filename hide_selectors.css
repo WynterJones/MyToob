@@ -18,3 +18,15 @@ ytd-ad-slot-renderer,
 .ytp-paid-content-overlay {
   display: none !important;
 }
+
+#text-container .yt-notification-action-renderer {
+  display: none !important;
+}
+
+#movie_player > div.html5-video-container > video {
+  border-radius: 16px !important;
+}
+
+#movie_player > div.html5-video-container {
+  padding: 10px 0 !important;
+}
