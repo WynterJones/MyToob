@@ -19,7 +19,7 @@ ytd-ad-slot-renderer,
   display: none !important;
 }
 
-#text-container .yt-notification-action-renderer {
+.yt-notification-action-renderer {
   display: none !important;
 }
 

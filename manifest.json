@@ -26,13 +26,15 @@
         "content.js",
         "hover_lockup_metadata_popup.js",
         "watched_filter.js",
-        "watch_css_toggle.js"
+        "watch_css_toggle.js",
+        "view_toggle.js"
       ],
       "css": [
         "hide_selectors.css",
         "rich_item_width.css",
         "hide_rich_items_with_overlay.css",
-        "hover_lockup_metadata_popup.css"
+        "hover_lockup_metadata_popup.css",
+        "view_toggle.css"
       ]
     },
     {

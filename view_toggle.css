@@ -1,0 +1,384 @@
+#contents.mytube-text-layout {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+}
+
+#contents.mytube-text-layout > ytd-rich-item-renderer {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 1 1 100% !important;
+  margin: 0 0 8px 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+/* Hide original YouTube elements in list view */
+#contents.mytube-text-layout .yt-lockup-view-model-wiz,
+#contents.mytube-text-layout ytd-rich-grid-media,
+#contents.mytube-text-layout #content > * {
+  display: none !important;
+}
+
+/* Show our custom list items */
+#contents.mytube-text-layout .mytube-list-item {
+  display: block !important;
+  width: 100% !important;
+  padding: 12px 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.mytube-list-link {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* No hover effects in list view */
+#contents.mytube-text-layout .mytube-list-link:hover .mytube-list-title {
+  color: inherit !important;
+}
+
+.mytube-list-title {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #f1f1f1 !important;
+  margin-bottom: 6px !important;
+  line-height: 1.4 !important;
+}
+
+/* Dark mode support */
+html[dark] .mytube-list-title,
+[dark] .mytube-list-title {
+  color: #f1f1f1 !important;
+}
+
+/* Light mode support */
+html:not([dark]) .mytube-list-title {
+  color: #030303 !important;
+}
+
+.mytube-list-metadata {
+  font-size: 13px !important;
+  color: #606060 !important;
+}
+
+.mytube-list-channel {
+  font-weight: 400 !important;
+}
+
+.mytube-list-separator {
+  margin: 0 6px !important;
+  color: #909090 !important;
+}
+
+.mytube-list-views {
+  color: #909090 !important;
+  font-size: 12px !important;
+}
+
+.mytube-list-date {
+  color: #909090 !important;
+  font-size: 12px !important;
+}
+
+/* Remove all hover effects in text layout except for our links */
+#contents.mytube-text-layout *:not(.mytube-list-link) {
+  cursor: default !important;
+}
+
+#contents.mytube-text-layout a:not(.mytube-list-link):hover {
+  text-decoration: none !important;
+}
+
+/* Make our video links clickable and styled */
+.mytube-list-link:hover,
+.mytube-list-link:hover * {
+  color: #ff0000 !important;
+  cursor: pointer !important;
+}
+
+/* Hide browse results while loading list view */
+#contents.mytube-text-layout.mytube-loading-active
+  ytd-two-column-browse-results-renderer {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Loading indicator styles */
+.mytube-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.mytube-loading-bar {
+  width: 200px;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.mytube-loading-progress {
+  height: 100%;
+  background: #ff0000;
+  width: 0;
+  animation: mytube-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes mytube-loading {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.mytube-loading-text {
+  color: white;
+  font-size: 14px;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+/* Hide hover popups in list view */
+#contents.mytube-text-layout .ytab-hover-popup,
+#contents.mytube-text-layout [class*="hover-popup"],
+#contents.mytube-text-layout [class*="tooltip"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}
+
+/* Enable hover popups only in grid view */
+#contents.mytube-grid-layout .ytab-hover-popup,
+#contents.mytube-grid-layout [class*="hover-popup"],
+#contents.mytube-grid-layout [class*="tooltip"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+#contents.mytube-text-layout #video-title {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 8px !important;
+  color: #0f0f0f !important;
+}
+
+#contents.mytube-text-layout #channel-name {
+  font-size: 14px !important;
+  color: #606060 !important;
+  margin-bottom: 4px !important;
+}
+
+#contents.mytube-text-layout #metadata-line {
+  font-size: 12px !important;
+  color: #909090 !important;
+}
+
+#contents.mytube-text-layout #metadata-line span:not(:last-child)::after {
+  content: " • ";
+  color: #909090 !important;
+}
+
+#contents.mytube-text-layout .yt-lockup-metadata-view-model-wiz__title {
+  display: block !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 8px !important;
+  color: #0f0f0f !important;
+  text-decoration: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#contents.mytube-text-layout .yt-lockup-metadata-view-model-wiz__title span {
+  display: inline !important;
+  visibility: visible !important;
+}
+
+#contents.mytube-text-layout .yt-core-attributed-string {
+  display: inline !important;
+  visibility: visible !important;
+}
+
+#contents.mytube-text-layout
+  .yt-content-metadata-view-model-wiz__metadata-row:first-child
+  .yt-core-attributed-string__link {
+  display: inline-block !important;
+  font-size: 14px !important;
+  color: #606060 !important;
+  margin-bottom: 4px !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+}
+
+#contents.mytube-text-layout
+  .yt-content-metadata-view-model-wiz__metadata-text {
+  display: inline !important;
+  font-size: 13px !important;
+  color: #909090 !important;
+}
+
+#contents.mytube-text-layout .yt-content-metadata-view-model-wiz__delimiter {
+  display: inline !important;
+  margin: 0 4px !important;
+  color: #909090 !important;
+}
+
+#contents.mytube-text-layout ytd-rich-grid-media {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+#contents.mytube-text-layout .yt-lockup-view-model-wiz {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+#contents.mytube-text-layout
+  .yt-lockup-metadata-view-model-wiz__text-container {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+#contents.mytube-text-layout .yt-lockup-metadata-view-model-wiz {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Remove hover effects in list view */
+#contents.mytube-text-layout yt-touch-feedback-shape,
+#contents.mytube-text-layout .yt-spec-touch-feedback-shape {
+  display: none !important;
+}
+
+#contents.mytube-text-layout ytd-rich-item-renderer:hover {
+  background: transparent !important;
+}
+
+/* Ensure title is visible and clickable */
+#contents.mytube-text-layout a[href^="/watch"] {
+  display: block !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+#contents.mytube-text-layout #dismissible {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+}
+
+#contents.mytube-text-layout #details {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+#contents.mytube-text-layout #meta {
+  width: 100% !important;
+}
+
+#contents.mytube-grid-layout > ytd-rich-item-renderer {
+  width: 15% !important;
+  max-width: 15% !important;
+  flex: 0 0 15% !important;
+}
+
+#contents.mytube-grid-layout ytd-thumbnail {
+  display: block !important;
+}
+
+#contents.mytube-grid-layout #video-title {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 4px !important;
+}
+
+#contents.mytube-grid-layout #channel-name {
+  font-size: 12px !important;
+  color: #606060 !important;
+  margin-bottom: 2px !important;
+}
+
+#contents.mytube-grid-layout #metadata-line {
+  font-size: 11px !important;
+  color: #909090 !important;
+}
+
+#contents.mytube-grid-layout ytd-rich-grid-media {
+  display: block !important;
+}
+
+#contents.mytube-grid-layout #dismissible {
+  display: block !important;
+  width: auto !important;
+}
+
+#contents.mytube-grid-layout #details {
+  width: auto !important;
+  padding: 12px 4px 0 0 !important;
+}
+
+#contents.mytube-grid-layout #meta {
+  width: auto !important;
+}
+
+@media (max-width: 1200px) {
+  #contents.mytube-grid-layout > ytd-rich-item-renderer {
+    width: 20% !important;
+    max-width: 20% !important;
+    flex: 0 0 20% !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #contents.mytube-grid-layout > ytd-rich-item-renderer {
+    width: 25% !important;
+    max-width: 25% !important;
+    flex: 0 0 25% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #contents.mytube-grid-layout > ytd-rich-item-renderer {
+    width: 33.333% !important;
+    max-width: 33.333% !important;
+    flex: 0 0 33.333% !important;
+  }
+
+  #contents.mytube-text-layout {
+    padding: 10px !important;
+  }
+}
